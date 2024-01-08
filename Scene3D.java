@@ -50,7 +50,7 @@ public class Scene3D {
      * @param roughness How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.roughness
      * @param metalness How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.metalness
      */
-    void addBox(double cx, double cy, double cz,
+    public void addBox(double cx, double cy, double cz,
                         double xlen, double ylen, double zlen,
                         double r, double g, double b,
                         double roughness, double metalness) {
@@ -76,7 +76,7 @@ public class Scene3D {
      * @param sy Scale about y-axis
      * @param sz Scale about z-axis
      */
-    void addCylinder(double cx, double cy, double cz, double radius, 
+    public void addCylinder(double cx, double cy, double cz, double radius, 
                             double height, double r, double g, double b,
                             double roughness, double metalness,
                             double rx, double ry, double rz,
@@ -97,7 +97,7 @@ public class Scene3D {
      * @param roughness How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.roughness
      * @param metalness How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.metalness
      */
-    void addCylinder(double cx, double cy, double cz, double radius, 
+    public void addCylinder(double cx, double cy, double cz, double radius, 
                             double height, double r, double g, double b,
                             double roughness, double metalness) {
         addCylinder(cx, cy, cz, radius, height, r, g, b, roughness, metalness, 0, 0, 0, 1, 1, 1);
@@ -122,7 +122,7 @@ public class Scene3D {
      * @param sy Scale about y-axis
      * @param sz Scale about z-axis
      */
-    void addCone(double cx, double cy, double cz, double radius, 
+    public void addCone(double cx, double cy, double cz, double radius, 
                             double height, double r, double g, double b,
                             double roughness, double metalness,
                             double rx, double ry, double rz,
@@ -143,7 +143,7 @@ public class Scene3D {
      * @param roughness How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.roughness
      * @param metalness How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.metalness
      */
-    void addCone(double cx, double cy, double cz, double radius, 
+    public void addCone(double cx, double cy, double cz, double radius, 
                             double height, double r, double g, double b,
                             double roughness, double metalness) {
         addCone(cx, cy, cz, radius, height, r, g, b, roughness, metalness, 0, 0, 0, 1, 1, 1);
@@ -166,7 +166,7 @@ public class Scene3D {
      * @param ry Rotation about y-axis, in degrees
      * @param rz Rotation about z-axis, in degrees
      */
-    void addEllipsoid(double cx, double cy, double cz, 
+    public void addEllipsoid(double cx, double cy, double cz, 
                             double radx, double rady, double radz,
                             double r, double g, double b, 
                             double roughness, double metalness,
@@ -188,7 +188,7 @@ public class Scene3D {
      * @param roughness How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.roughness
      * @param metalness How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.metalness
      */
-    void addEllipsoid(double cx, double cy, double cz, 
+    public void addEllipsoid(double cx, double cy, double cz, 
                             double radx, double rady, double radz,
                             double r, double g, double b,
                             double roughness, double metalness) {
@@ -207,7 +207,7 @@ public class Scene3D {
      * @param roughness How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.roughness
      * @param metalness How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.metalness
      */
-    void addSphere(double cx, double cy, double cz, double radius,
+    public void addSphere(double cx, double cy, double cz, double radius,
                         double r, double g, double b,
                         double roughness, double metalness) {
         addEllipsoid(cx, cy, cz, radius, radius, radius, r, g, b, roughness, metalness);
@@ -232,7 +232,7 @@ public class Scene3D {
      * @param roughness How rough the material appears. 0.0 means a smooth mirror reflection, 1.0 means fully diffuse. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.roughness
      * @param metalness How much the material is like a metal. Non-metallic materials such as wood or stone use 0.0, metallic use 1.0, with nothing (usually) in between. https://threejs.org/docs/#api/en/materials/MeshStandardMaterial.metalness
      */
-    void addMesh(String path, 
+    public void addMesh(String path, 
                     double cx, double cy, double cz, 
                     double rx, double ry, double rz,
                     double sx, double sy, double sz,
@@ -257,7 +257,7 @@ public class Scene3D {
     * @param sz Scale along z-axis
     * @param shininess A number in [0, 255] describing how shiny the mesh is
     */
-    void addTexturedMesh(String path, String matpath,
+    public void addTexturedMesh(String path, String matpath,
                     double cx, double cy, double cz, 
                     double rx, double ry, double rz,
                     double sx, double sy, double sz,
@@ -273,7 +273,7 @@ public class Scene3D {
      * @param z Z position of camera
      * @param rot Rotation in degrees about y-axis
      */
-    void addCamera(double x, double y, double z, double rot) {
+    public void addCamera(double x, double y, double z, double rot) {
         sceneCode += "canvas.addCamera(" + x + "," + y + "," + z + "," + rot + ");\n";
     }
     
@@ -288,7 +288,7 @@ public class Scene3D {
      * @param b Blue component of light in [0, 255]
      * @param intensity The intensity of the light, in [0, 1]
      */
-    void addPointLight(double x, double y, double z, double r, double g, double b, double intensity) {
+    public void addPointLight(double x, double y, double z, double r, double g, double b, double intensity) {
         sceneCode += "canvas.addPointLight(" + x + "," + y + "," + z + "," + r + "," + g + "," + b + "," + intensity + ");\n";
     }
 
@@ -304,7 +304,7 @@ public class Scene3D {
      * @param b Blue component of light in [0, 255]
      * @param intensity The intensity of the light, in [0, 1]
      */
-    void addDirectionalLight(double x, double y, double z, double r, double g, double b, double intensity) {
+    public void addDirectionalLight(double x, double y, double z, double r, double g, double b, double intensity) {
         sceneCode += "canvas.addDirectionalLight(" + x + "," + y + "," + z + "," + r + "," + g + "," + b + "," + intensity + ");\n";
     }
 
@@ -313,7 +313,7 @@ public class Scene3D {
      * @param filename Path to which to save file (should end with .json)
      * @param sceneName Title of the scene to display in the viewer
      */
-    void saveScene(String filename, String sceneName) {
+    public void saveScene(String filename, String sceneName) {
         String htmlstr = HTML_PREFIX + "<script>\n";
         htmlstr += sceneCode;
         htmlstr += "canvas.name = \"" + sceneName + "\";\n";
